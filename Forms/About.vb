@@ -1,5 +1,5 @@
 ﻿Imports System.Drawing
-
+'TODO: Add an option to create a bigger form for the situations where there's a long title, or long description
 ''' <summary>
 ''' Represents an About form for displaying application information.
 ''' </summary>
