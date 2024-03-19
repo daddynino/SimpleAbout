@@ -1,0 +1,30 @@
+﻿
+' Link the Simple About form to your app, then insert this code and link it to an About button.
+Private Shared Sub Simple()
+        ' Pulling data directly from app using My.Application.Info
+        ' Can override with custom values if desired
+
+        Dim AppTitle As String = My.Application.Info.Title.ToString()
+        Dim AppVersion As String = My.Application.Info.Version.ToString()
+        Dim Description As String = My.Application.Info.Description.ToString()
+        Dim AppCopyright As String = My.Application.Info.Copyright.ToString()
+        Dim AccentColor As Color = Color.Green
+        Dim FontColor As Color = Color.White
+
+        ' Custom values, if desired
+        ' Dim CustomTitle As String = "My Custom Title"
+        ' Dim CustomVersion As String = "1.0"
+        ' Dim CustomDescription As String = "My custom description"
+        ' Dim CustomCopyright As String = "© 2024 My Company"
+
+        ' Use custom or default values
+        Dim Frm As New SimpleAbout.About With {
+    .Title = AppTitle, ' Use CustomTitle if desired
+    .VersionNumber = AppVersion, ' Use CustomVersion if desired
+    .Description = Description, ' Use CustomDescription if desired
+    .Copyright = AppCopyright, ' Use CustomCopyright if desired
+    .AccentColor = AccentColor,
+    .FontColor = FontColor
+}
+        Frm.Show()
+    End Sub
