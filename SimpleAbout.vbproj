@@ -4,8 +4,8 @@
     <RootNamespace>SimpleAbout</RootNamespace>
     <TargetFramework>net5.0-windows7.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyVersion>24.3.19.17</AssemblyVersion>
-    <FileVersion>24.3.19.17</FileVersion>
+    <AssemblyVersion>24.3.19.18</AssemblyVersion>
+    <FileVersion>24.3.19.18</FileVersion>
     <OptionStrict>On</OptionStrict>
     <Title>Simple About</Title>
     <Authors>Neil Saunders</Authors>

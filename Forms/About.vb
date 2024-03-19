@@ -1,14 +1,54 @@
-﻿Public NotInheritable Class About
+﻿Imports System.Drawing
 
-    Dim dragging As Boolean
-    Dim startPoint As Point
+''' <summary>
+''' Represents an About form for displaying application information.
+''' </summary>
+Public NotInheritable Class About
 
+    ''' <summary>
+    ''' Flag indicating whether the form is being dragged.
+    ''' </summary>
+    Private dragging As Boolean
+
+    ''' <summary>
+    ''' The starting point for dragging the form.
+    ''' </summary>
+    Private startPoint As Point
+
+    ''' <summary>
+    ''' Gets or sets the title of the application.
+    ''' </summary>
     Public Property Title As String
+
+    ''' <summary>
+    ''' Gets or sets the version number of the application.
+    ''' </summary>
     Public Property VersionNumber As String
+
+    ''' <summary>
+    ''' Gets or sets the copyright information of the application.
+    ''' </summary>
     Public Property Copyright As String
+
+    ''' <summary>
+    ''' Gets or sets the description of the application.
+    ''' </summary>
     Public Property Description As String
+
+    ''' <summary>
+    ''' Gets or sets the accent color of the form.
+    ''' </summary>
     Public Property AccentColor As Color
+
+    ''' <summary>
+    ''' Gets or sets the font color of the form.
+    ''' </summary>
     Public Property FontColor As Color
+
+    ''' <summary>
+    ''' Handles the Load event of the form.
+    ''' Initializes the form with provided information or defaults.
+    ''' </summary>
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If Title = "" Then
@@ -39,10 +79,18 @@
         Me.LblXToClose.ForeColor = FontColor
     End Sub
 
-    Private Sub OKButton_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Close()
+    ''' <summary>
+    ''' Handles the Click event of the OK button.
+    ''' Closes the form.
+    ''' </summary>
+    Private Sub OKButton_Click(sender As Object, e As EventArgs)
+        Me.Close()
     End Sub
 
+    ''' <summary>
+    ''' Handles the Click event of the close label.
+    ''' Closes the form.
+    ''' </summary>
     Private Sub LblXToClose_Click(sender As Object, e As EventArgs) Handles LblXToClose.Click
         Me.Close()
     End Sub
